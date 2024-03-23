@@ -1,12 +1,8 @@
-from flask import Flask, render_template
-from flask_frozen import Freezer
-
+from flask import Flask
 app = Flask(__name__)
-freezer = Freezer(app)
-
 @app.route('/')
 def index():
     return 'Welcome to the home page!'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
